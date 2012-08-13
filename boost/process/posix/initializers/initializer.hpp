@@ -22,11 +22,11 @@ struct initializer
     /// InitializerSequence.
     typedef initializer_combination::ignore combination_category;
 
-    void    pre_fork_parent(executor&) const {}
-    void   post_fork_parent(executor&) const {}
-    void failed_fork_parent(executor&) const {}
-    void   post_fork_child (executor&) const {}
-    void failed_exec_child (executor&) const {}
+    template<class Executor> void    pre_fork_parent(Executor&) const {}
+    template<class Executor> void   post_fork_parent(Executor&) const {}
+    template<class Executor> void failed_fork_parent(Executor&) const {}
+    template<class Executor> void   post_fork_child (Executor&) const {}
+    template<class Executor> void failed_exec_child (Executor&) const {}
     
     struct lazy
     {

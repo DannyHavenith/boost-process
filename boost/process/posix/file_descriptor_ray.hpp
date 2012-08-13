@@ -12,6 +12,8 @@
 #include <boost/iostreams/device/file_descriptor.hpp>
 #include <fcntl.h>
 
+#include <fcntl.h>
+
 namespace boost { namespace process { namespace posix {
 
     struct file_descriptor_ray 
